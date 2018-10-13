@@ -1,2 +1,2 @@
 # JavaScript
-JS projects
+JS projects from https://learn.javascript.ru/js
