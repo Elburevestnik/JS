@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://learn.javascript.ru/test/libs.js"></script>
+  <script src="test.js"></script>
+</head>
+
+<body>
+
+  <script>
+    "use strict"
+    // registor up for first symbol
+    function ucFirst(name) {
+      return ((name.charAt(0)).toUpperCase() + name.slice(1, name.length));
+    }
+    //spam
+    function checkSpam(str) {
+      str = str.toLowerCase();
+      if (~str.indexOf('viagra') || ~str.indexOf('xxx')) return true;
+      else return false;
+    }
+
+    //low length
+	function truncate(str, maxlength) {
+	  if (str.length > maxlength) {
+		return str.slice(0, maxlength - 3) + '...';
+		// итоговая длина равна maxlength
+	  }
+
+	  return str;
+	}
+    // find money
+    function extractCurrencyValue(str) {
+      return +(str.slice(1, str.length));
+    }
+  </script>
+
+</body>
+
+</html>
