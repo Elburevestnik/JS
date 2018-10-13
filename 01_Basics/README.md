@@ -1,2 +1,2 @@
 # Basics of JavaScript 
-This folder contains tasks from the first chapter. 
+This folder contains tasks from the first/second chapter. 
