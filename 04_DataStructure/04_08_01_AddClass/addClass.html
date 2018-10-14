@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://learn.javascript.ru/test/libs.js"></script>
+  <script src="test.js"></script>
+</head>
+
+<body>
+
+  <script>
+	"use strict"
+    function addClass(obj, cls) {
+      if (obj.className) {
+        var objSplit = (obj.className.split(' '));
+      } else {
+        var objSplit = [];
+      }
+
+      var flag = true;
+      for (var i = 0; i < objSplit.length; i++) {
+        if (objSplit[i] == cls) flag = false;
+      }
+      if (flag) {
+        objSplit.push(cls);
+      }
+      obj.className = objSplit.join(' ');
+    }
+    function removeClass(obj, cls) {
+      if (obj.className) {
+        var objSplit = (obj.className.split(' '));
+      } else {
+        var objSplit = [];
+      }
+      for (var i = 0; i < objSplit.length; i++) {
+        if (objSplit[i] == cls) {
+          objSplit.splice(i, 1);
+          if (objSplit[i] == cls) objSplit.splice(i, 1);
+        }
+      }
+      obj.className = objSplit.join(' ');
+      return obj.className;
+    }
+  </script>
+
+</body>
+
+</html>	
