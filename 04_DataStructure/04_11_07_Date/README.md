@@ -1,1 +1,1 @@
-# number of seconds to tomorrow
+# Number of seconds to tomorrow
