@@ -1,0 +1,1 @@
+# Week day. Europe format 
