@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://learn.javascript.ru/test/libs.js"></script>
+  <script src="test.js"></script>
+</head>
+
+<body>
+
+  <script>
+    function formatDate(date) {
+      var newDate = new Date() - date;
+      if (newDate < 1000) {
+        var str = 'только что';
+        return str;
+      }
+      if (newDate < 60 * 1000) {
+        var str = newDate / 1000 + ' сек. назад';
+        return str;
+      }
+      if (newDate < 60 * 60 * 1000) {
+        var str = newDate / 1000 / 60 + ' мин. назад';
+        return str;
+      }
+      if (newDate < 60 * 60 * 1000) {
+        var str = newDate / 1000 / 60 + ' мин. назад';
+        return str;
+      }
+
+      var date1 = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+      var newDate = date1.toISOString();
+      var arrDate = newDate.split('T');
+      var arr = arrDate[0].split('-');
+      var year = (arr[0].charAt(2) + arr[0].charAt(3));
+      var time = (date.getHours() + ':' + date.getMinutes());
+      return (arr[2] + '.' + arr[1] + '.' + year + ' ' + time);
+    }
+
+
+
+    
+  </script>
+
+</body>
+
+</html>
