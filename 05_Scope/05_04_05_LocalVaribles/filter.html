@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://learn.javascript.ru/test/libs.js"></script>
+  <script src="test.js"></script>
+</head>
+
+<body>
+
+  <script>
+    function filter(arr, func) {
+      var arrFilt = [];
+      for (var i = 0; i < arr.length; i++) {
+        if (func(arr[i])) arrFilt.push(arr[i]); 
+        
+      }
+      return arrFilt;
+    }
+    function inBetween(a, b) {
+      return (function (arrEl) {
+        if ((arrEl >= a) && (arrEl <= b)) return true;
+        else return false;
+      });
+    }
+    function inArray(array) {
+      return (function (arrEl) {
+        if (array.indexOf(arrEl) != -1) return true;
+        else return false;
+      });
+    }
+  </script>
+
+</body>
+
+</html>
