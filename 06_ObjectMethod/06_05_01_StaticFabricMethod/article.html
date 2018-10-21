@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://learn.javascript.ru/test/libs.js"></script>
+  <script src="test.js"></script>
+</head>
+
+<body>
+
+  <script>
+    function Article() {
+      this.created = new Date();
+      Article.countObj++;
+      Article.date = this.created;
+    }
+    Article.countObj = 0;
+    Article.showStats = function() {
+      alert('Всего: ' + this.countObj + ', Последняя: ' + this.date);
+    }
+  </script>
+
+</body>
+
+</html>
