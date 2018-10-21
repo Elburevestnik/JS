@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://learn.javascript.ru/test/libs.js"></script>
+  <script src="test.js"></script>
+</head>
+
+<body>
+
+  <script>
+    function makeLogging(f, log) {
+      return function() {
+        var arr = [];
+        for (var i = 0; i < arguments.length; i++) {
+          arr.push(arguments[i]);
+        }
+        log.push(arr);
+        return f.apply(this, arguments);
+      }
+
+    }
+  </script>
+
+</body>
+
+</html>
