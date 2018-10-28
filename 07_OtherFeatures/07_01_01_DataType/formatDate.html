@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://ru.js.cx/test/libs.js"></script>
+  <script src="test.js"></script>
+</head>
+
+<body>
+
+  <script>
+    function formatDate(date) {
+      //var dateNowSeconds = new Date();
+      //var dateNowDay = new Date();
+      if (typeof date == 'number') {
+        var dateEnter = new Date(date * 1000);
+        var year = dateEnter.getFullYear();
+        var yearStr = '' + (year);
+
+        if (dateEnter.getDate() < 10) var day = '0' + dateEnter.getDate();
+        else var day = dateEnter.getDate();
+        if (dateEnter.getMonth() < 10) var month = '0' + (dateEnter.getMonth() + 1);
+        else var month = dateEnter.getMonth();
+        return (day + '.' + month + '.' + yearStr.charAt(2) + yearStr.charAt(3));
+      } else if (typeof date == 'string') {
+        var formDate = Date.parse(date);
+        var dateEnter = new Date(formDate);
+        var year = dateEnter.getFullYear(dateEnter);
+        var yearStr = '' + (year);
+        if (dateEnter.getDate() < 10) var day = '0' + dateEnter.getDate();
+        else var day = dateEnter.getDate();
+        if ((dateEnter.getMonth() + 1) < 10) var month = '0' + (dateEnter.getMonth() + 1);
+        else var month = (dateEnter.getMonth() + 1);
+        return (day + '.' + month + '.' + yearStr.charAt(2) + yearStr.charAt(3));
+
+      } else if (toString.call(date) == "[object Date]") {
+        var year = date.getFullYear();
+        var yearStr = '' + (year);
+        if (date.getDate() < 10) var day = '0' + date.getDate();
+        else var day = date.getDate();
+        if (date.getMonth() < 10) var month = '0' + (date.getMonth() + 1);
+        else var month = date.getMonth();
+        return (day + '.' + month + '.' + yearStr.charAt(2) + yearStr.charAt(3));
+      } else if (typeof Array.isArray(date)) {
+        var year = '' + (date[0]);
+        if ((date[2] < 10)) var day = '0' + date[2];
+        else day = date[2];
+        if ((date[1] < 10)) var month = '0' + (+date[1] + 1);
+        else month = date[1];
+        return (day + '.' + (month) + '.' + year.charAt(2) + year.charAt(3));
+      }
+    }
+  </script>
+
+</body>
+
+</html>
