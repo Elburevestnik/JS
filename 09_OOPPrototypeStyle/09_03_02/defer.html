@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    Function.prototype.defer = function(ms) {
+        return function() {
+          var self = this;
+          setTimeout(this.apply(self, arguments), ms);
+        }.bind(this);
+      }
+      // проверка
+    function f(a, b) {
+      alert(a + b);
+    }
+
+    f.defer(1000)(1, 2); // выведет 3 через 1 секунду.
+  </script>
+</body>
+
+</html>
